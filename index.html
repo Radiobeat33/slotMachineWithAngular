@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Slot Machine for Thumbtack</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/lib/sweet-alert.css">
+  <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+</head>
+<body class='viewBackground'>
+
+  <!-- UI Router serves up html template here -->
+  <ui-view></ui-view>
+
+  <!-- Components-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
+  <script src="bower_components/sweetalert/lib/sweet-alert.min.js"></script>
+  
+  <!-- App Files -->
+  <script src="modules/app.module.js"></script>
+  <script src="controllers/slotMachineReel1.js"></script>
+  <script src="controllers/slotMachineReel2.js"></script>
+  <script src="controllers/slotMachineReel3.js"></script>
+  <script src="controllers/startButton.js"></script>
+  <script src="services/sfxService.js"></script>
+
+</body>
+</html>

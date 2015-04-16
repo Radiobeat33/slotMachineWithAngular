@@ -1,0 +1,40 @@
+<!-- HTML5 video & music player -->
+<video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted">
+  <source src="assets/reelVideo/casino.mp4" type="video/mp4">
+</video>
+<audio controls preload="auto" autoplay="true" loop="loop" muted="muted">
+  <source src="assets/reelSounds/casinomusic.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Spacing for Slot Machine using ngMaterial-->
+<div layout="row">
+  <div flex class="outerFiller"></div>
+</div>
+
+<!-- Container for Slot Machine -->
+<div layout="row" class="viewPosition">
+  <!-- Additional spacing for Slot Machine using ngMaterial-->
+  <div flex="33" class="leftColumn"></div>
+  <!-- Actual Slot Machine -->
+  <div flex="33" class="midColumn border centeredAssets">
+    <div layout="row">
+      <div flex class="innerFiller"></div>
+    </div>
+    <div layout="row">
+      <div flex="33" class="reel1 leftReel" ng-controller="slotMachineReel1">
+        <div ng-model="slotValue"><img class="reelImgSize" src="{{ slotValue }}"></div>
+      </div>
+      <div flex="33" class="reel2" ng-controller="slotMachineReel2">
+        <div ng-model="slotValue"><img class="reelImgSize" src="{{ slotValue }}"></div>
+      </div>
+      <div flex="33" class="reel3 rightReel" ng-controller="slotMachineReel3">
+        <div ng-model="slotValue"><img class="reelImgSize" src="{{ slotValue }}"></div>
+      </div>
+    </div>
+    <div ng-controller="startButton" ng-init="startSong()">
+      <md-button class="md-raised md-primary reelBtn" ng-click="reelBegin()">{{ play }}</md-button>
+    </div>
+  </div>
+  <!-- Additional spacing for Slot Machine using ngMaterial-->
+  <div flex="33" class="rightColumn"></div>
+</div>
